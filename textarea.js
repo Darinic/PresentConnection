@@ -6,12 +6,12 @@ function autosize(textarea_id, minRows, maxRows) {
     textarea.addEventListener("input", function () {
         let rows = parseInt(this.getAttribute("rows"), 10);
         while (this.scrollHeight > this.clientHeight) {
-            this.setAttribute("rows", rows);
             if (rows < maxRows) {
-                textarea.setAttribute("rows", maxRows);
+                rows++;
             } else {
-                rows = ++rows;
+                ++rows;
             }
+            this.setAttribute("rows", rows);
         }
 
         if (rows > maxRows) {
@@ -21,4 +21,4 @@ function autosize(textarea_id, minRows, maxRows) {
     });
 }
 
-autosize("textarea", 3, 6);
+autosize("textarea", 2, 5);
