@@ -3,8 +3,7 @@
 }
 
 .textarea {
-    width: 50%;
-    height: fit-content;
+    height: auto;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
